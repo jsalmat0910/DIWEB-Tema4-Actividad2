@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: lightgoldenrodyellow;
+    color: lightseagreen;
+    height: 200px;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    
+    aside {
+    flex-basis: 25%;
+    }
+    
+    ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .olimpiada {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    width: 125px;
+    }
+    
+    .olimpiada:hover {
+    background-color: #e6e6e6;
+    }
+    
+    .main {
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+    
+    .main-image {
+    height: 450px;
+    width: 450px;
+    }
+    
+    .thumbnails {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .thumbnail {
+    margin: 0 10px;
+    }
+    
+    .thumbnail-image {
+    border: 2px solid ;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    width: 150px;
+    height:150px;
+    }
+    
+    .thumbnail-image:hover {
+    border-color: #f8d24e;
+    }
+    
+    .active-thumbnail .thumbnail-image {
+    border-color: #f8d24e;
+    }
+    
+    @media (max-width: 768px) {
+        aside {
+        display: none;
+        }
+    }
+    
+    footer {
+        background-color: lightgoldenrodyellow;
+        color: lightseagreen;
+        padding: 20px;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+          
+  
+
+      .slider-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .prev-btn{
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        padding: 0 1rem;
+        margin-right: 150px;
+        color: #333;
+      }
+      .next-btn {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        padding: 0 1rem;
+        margin-left: 350px;
+        color: #333;
+      }
+      
+      .thumbnails {
+        display: none;
+      }
+      
+      @media (min-width: 768px) {
+        .thumbnails {
+          display: flex;
+        }
+      }
+      
+      .thumbnail-image:hover {
+        transform: scale(1.2);
+      }
+
+      .image-section {
+        display: none;
+        
+      }
+      .active {
+        display: block;
+        display: flex;
+        justify-content: center;
+      }
+
+      .main-image:active{
+        transform: scale(1.2);
+      }

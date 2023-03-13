@@ -1,0 +1,512 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+    const slider = $('.slider');
+    const thumbnails = $('.thumbnails img');
+
+    thumbnails.on('click', function() {
+        counter = $(this).index();
+        slider.css('transform', `translateX(-${counter * 25}%)`);
+        setActiveThumbnail();
+    });
+    
+    function setActiveThumbnail() {
+        thumbnails.removeClass('active');
+        $(thumbnails[counter]).addClass('active');
+    }
+
+
+    $('#1').click(function() {
+      var imagenes = ["Beijin.png", "Beijin1.png", "Beijin2.png", "Beijin3.png"];
+      var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+
+
+// 2
+    $('#2').click(function() {
+      var imagenes = ["tokio.png", "tokio1.png", "tokio2.png", "tokio3.png"];
+      var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 3
+    $('#3').click(function() {
+    var imagenes = ["buenosaires.png", "buenosaires1.png", "buenosaires2.png", "buenosaires3.png"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 4
+    $('#4').click(function() {
+    var imagenes = ["lausana.png", "lausana1.png", "lausana2.png", "lausana3.png"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 5
+    $('#5').click(function() {
+    var imagenes = ["rio.png", "rio1.png", "rio2.png", "rio3.png"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 6
+    $('#6').click(function() {
+    var imagenes = ["sochi.png", "sochi1.png", "sochi2.png", "sochi3.png"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 7
+    $('#7').click(function() {
+    var imagenes = ["londres.png", "londres1.png", "londres2.png", "londres3.png"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 8
+      $('#8').click(function() {
+    var imagenes = ["singapur.png", "singapur1.png", "singapur2.png","singapur3.png"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+    })
+
+  });
+
+
+  </script>
+
+  </head>
+  <body>
+    <header>
+      <img src="aros.png" alt="aros olimpicos" style="width: 200px;">
+      <h1 style="text-align: center;">Galería Juegos Olímpicos</h1>
+      <canvas id="banner" width="800" height="80px"></canvas>
+    </header>
+
+    <div class="container">
+      <aside>
+        <ul>
+          <li>
+            <a id="1" href="#" class="olimpiada" data-name="Beijin 2022">Beijin 2022</a>
+            <img src="/Emblemas/Beijin2022.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="2" href="#" class="olimpiada" data-name="Tokio 2020">Tokio 2020</a>
+            <img src="/Emblemas/tokio2020.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="3" href="#" class="olimpiada" data-name="Lausana 2020">Lausana 2020</a>
+            <img src="/Emblemas/lausana2020.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="4" href="#" class="olimpiada" data-name="Buenos Aires 2018">Buenos Aires 2018</a>
+            <img src="/Emblemas/BuenosAires2018.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="5" href="#" class="olimpiada" data-name="Rio 2016">Rio 2016</a>
+            <img src="/Emblemas/rio2016.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="6" href="#" class="olimpiada" data-name="Sochi 2014">Sochi 2014</a>
+            <img src="/Emblemas/soschi2014.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="7" href="#" class="olimpiada" data-name="Londres 2012">Londres 2012</a>
+            <img src="/Emblemas/londres2012.png" style="width: 100px; padding-right: 150px;">
+          </li>
+          <li>
+            <a id="8" href="#" class="olimpiada" data-name="Singapur 2010">Singapur 2010</a>
+            <img src="/Emblemas/singapur2010.png" style="width: 100px; padding-right: 150px;">
+          </li>
+        </ul>
+      </aside>
+
+      <div class="main">
+        <div class="image-container slider">
+          <img src="aros.png" alt="Imagen principal" class="main-image">
+          <div class="slider-nav">
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+          </div>
+        </div>
+
+        <!-- 1 -->
+        <div  class="image-section" id="section1">
+          <div class="thumbnail">
+            <img src="Beijin.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="Beijin1.png" alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="Beijin2.png" alt="Imagen 3" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="Beijin3.png" alt="Imagen 3" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="image-section" id="section2">
+          <div class="thumbnail" class="image-section">
+            <img src="tokio.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="tokio1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="tokio2.png" alt="Imagen 3" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="tokio3.png" alt="Imagen 3" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="image-section" id="section3">
+          <div class="thumbnail" class="image-section">
+            <img src="lausana.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="lausana1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="lausana2.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="lausana3.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="image-section" id="section4">
+          <div class="thumbnail" class="image-section">
+            <img src="buenosaires.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="buenosaires1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="buenosaires2.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="buenosaires3.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="image-section" id="section5">
+          <div class="thumbnail" class="image-section">
+            <img src="rio.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="rio1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="rio2.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="rio3.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="image-section" id="section6">
+          <div class="thumbnail" class="image-section">
+            <img src="sochi.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="sochi1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="sochi2.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="sochi3.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="image-section" id="section7">
+          <div class="thumbnail" class="image-section">
+            <img src="londres.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="londres1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="londres2.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="londres3.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="image-section" id="section8">
+          <div class="thumbnail" class="image-section">
+            <img src="singapur.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="singapur1.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="singapur2.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="singapur3.png"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+
+        <script>
+          const button1 = document.getElementById("1");
+          const button2 = document.getElementById("2");
+          const button3 = document.getElementById("3");
+          const button4 = document.getElementById("4");
+          const button5 = document.getElementById("5");
+          const button6 = document.getElementById("6");
+          const button7 = document.getElementById("7");
+          const button8 = document.getElementById("8");
+
+          const section1 = document.getElementById("section1");
+          const section2 = document.getElementById("section2");
+          const section3 = document.getElementById("section3");
+          const section4 = document.getElementById("section4");
+          const section5 = document.getElementById("section5");
+          const section6 = document.getElementById("section6");
+          const section7 = document.getElementById("section7");
+          const section8 = document.getElementById("section8");
+
+          button1.addEventListener("click", () => {
+            section1.classList.add("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button2.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.add("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button3.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.add("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button4.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.add("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button5.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.add("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button6.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.add("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button7.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.add("active");
+            section8.classList.remove("active");
+          });
+
+          button8.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.add("active");
+          });
+
+        </script>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="galeria.js"></script>
+
+    <footer>
+      <div class="container">
+        <p>&copy; Juan Ramón Salguero Mateos 2022/23</p>
+      </div>
+    </footer>
+  </body>
+  </html>
